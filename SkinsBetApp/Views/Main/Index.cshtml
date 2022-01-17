@@ -1,0 +1,108 @@
+﻿@model Domain.Entities.Skin[]
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>title</title>
+</head>
+<body>
+<script type="application/javascript">
+let chances = 3;
+let items = [];
+function takeResult()
+{
+    debugger;
+    (async () => {
+      const rawResponse = await fetch('/Betting/TakeResult', 
+      {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(items),
+      });
+      const content = await rawResponse.json();
+    
+      console.log(content);
+    })();
+}
+function loadItems(modelItems)
+{
+    debugger;
+    for (let j = 0; j < modelItems.length; j++){
+        items.push(modelItems[j]);
+    }
+    loadChances();
+}
+function loadChances()
+{
+    let chancesTotal =  document.getElementById("chances");
+    if (chancesTotal !== null)
+    {
+        document.getElementById("chances").textContent = chances.toString();
+    }
+}
+function selectItem(id, classId)
+{
+    let currentItem = items.filter(i => i.id === id && i.classId == classId);
+    if (chances !== 0)
+    {
+         if (currentItem[0].select == false)
+         {
+            currentItem[0].select = true;
+            document.getElementById("id__"+ currentItem[0].id+" classid__" + currentItem[0].classId).style.border = "thick solid #0000FF";
+            chances--;
+         }
+         else
+         {
+             chances++;
+             currentItem[0].select = false;
+             document.getElementById("id__"+ currentItem[0].id+" classid__" + currentItem[0].classId).style.border = "none";
+         }   
+    }
+    else
+    {
+         if (currentItem[0].select == true)
+         {
+              chances++;
+              currentItem[0].select = false;
+              document.getElementById("id__"+ currentItem[0].id+" classid__" + currentItem[0].classId).style.border = "none";
+         }
+    }
+    loadChances();
+}
+</script>
+<script type="text/javascript">loadItems(@Json.Serialize(@Model));</script>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <table>
+          @{ var counter = 1; }
+          <tr>
+              @foreach (var item in Model)
+              {
+                  <td id="id__@item.Id classid__@item.ClassId" onclick="selectItem(@item.Id, @item.ClassId)">
+                      <img style=" height:70px;
+                                       width:auto;/*maintain aspect ratio*/
+                                       max-width:70px;" src="@Url.Content(item.IconUrl)" alt="Image"/>
+                  </td>
+                  if (counter % 10 == 0)
+                  {
+                      @:</tr>
+                      @:<tr>
+                  }
+                  counter++;
+              }
+          </tr>
+      </table>
+    </div>
+    <div class="col-sm">
+        <p>Количество фишек: <span id="chances">3</span></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

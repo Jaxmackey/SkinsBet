@@ -1,0 +1,15 @@
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\Domain.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\Domain.pdb
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+D:\Projects\SkinsBetMain\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
