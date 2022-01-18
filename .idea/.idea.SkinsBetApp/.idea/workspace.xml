@@ -6,28 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3dc2b63-8fae-4276-8154-0fe5b4ecc7b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SkinsBetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SkinsBetApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/SkinsBetApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/SkinsBetApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetApp/Controllers/BettingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/Controllers/BettingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetApp/Views/Main/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/Views/Main/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/ref/SkinsBetApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/ref/SkinsBetApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.RazorTargetAssemblyInfo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.RazorTargetAssemblyInfo.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/Razor/Views/Main/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/Razor/Views/Main/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/ref/SkinsBetApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/ref/SkinsBetApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/SkinsBetApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/SkinsBetApp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +32,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/762735b6ea2742db80bd06360372c7a3b270/11/ServiceProviderServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/InfrastructureModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Repositories/SteamRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Projects/SkinsBetMain/SkinsBetApp/Views/Main/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="23q0bJm2wlGF0bvhkrTHN6ZZ1Mj" />
   <component name="ProjectViewState">
@@ -111,7 +105,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -123,29 +117,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="START" />
     <option name="LAST_COMMIT_MESSAGE" value="START" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SkinsBetApp/Controllers/BettingController.cs</url>
-          <line>11</line>
-          <properties documentPath="D:\Projects\SkinsBetMain\SkinsBetApp\Controllers\BettingController.cs" initialLine="11" containingFunctionPresentation="method 'TakeResult'">
-            <startOffsets>
-              <option value="304" />
-            </startOffsets>
-            <endOffsets>
-              <option value="305" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
