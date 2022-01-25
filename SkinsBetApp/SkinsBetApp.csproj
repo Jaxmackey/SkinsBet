@@ -15,7 +15,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Controllers" />
+      <Folder Include="Entities" />
       <Folder Include="Views" />
+      <Folder Include="Views\Main" />
     </ItemGroup>
 
 </Project>

@@ -49,3 +49,4 @@ D:\Projects\SkinsBetMain\SkinsBetApp\obj\Debug\net5.0\Razor\Views\Main\Index.csh
 D:\Projects\SkinsBetMain\SkinsBetApp\obj\Debug\net5.0\SkinsBetApp.RazorTargetAssemblyInfo.cs
 D:\Projects\SkinsBetMain\SkinsBetApp\obj\Debug\net5.0\SkinsBetApp.Views.pdb
 D:\Projects\SkinsBetMain\SkinsBetApp\obj\Debug\net5.0\SkinsBetApp.csproj.CopyComplete
+D:\Projects\SkinsBetMain\SkinsBetApp\obj\Debug\net5.0\Razor\Views\Main\Questionnaire.cshtml.g.cs
