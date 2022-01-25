@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DbService;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,7 @@ namespace SkinsBetWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient<ISteamRepository, SteamRepository>();
+            services.AddSingleton<IMyWrap, MyWrap>();
             services.AddControllersWithViews();
         }
 

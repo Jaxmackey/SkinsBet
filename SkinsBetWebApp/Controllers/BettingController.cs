@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using DbService;
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ namespace SkinsBetWebApp.Controllers
     public class Betting : Controller
     {
         private readonly ISteamRepository _steamRepository;
+        private readonly IMyWrap _myWrap;
 
-        public Betting(ISteamRepository steamRepository)
+        public Betting(ISteamRepository steamRepository, IMyWrap myWrap)
         {
             this._steamRepository = steamRepository;
+            this._myWrap = myWrap;
         }
         [HttpPost]
         public async Task<IActionResult> TakeResult([FromBody]Skin[] skins)
@@ -50,6 +53,17 @@ namespace SkinsBetWebApp.Controllers
         [HttpPost]
         public async Task<Info> InsertInfo([FromBody]Info info)
         {
+            var currentDate = DateTime.Now.Date;
+            var currentDateDb = await _myWrap.ExecSqlCommandAsync(
+                $"SELECT * FROM beginsbet WHERE StartedAt = STR_TO_DATE('{currentDate}','%d.%m.%Y %H:%i:%s');");
+            if (currentDateDb.Rows.Count != 0)
+            {
+                
+            }
+            else
+            {
+                
+            }
             var remoteIpAddress = HttpContext.Connection.RemoteIpAddress;
             return info;
         }

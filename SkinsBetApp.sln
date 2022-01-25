@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkinsBetWebApp", "SkinsBetWebApp\SkinsBetWebApp.csproj", "{B5753DE3-4DAC-4141-A0FD-DD2EED199213}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbService", "DbService\DbService.csproj", "{E6094710-F8A1-42AB-A1E4-15D09EA758E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B5753DE3-4DAC-4141-A0FD-DD2EED199213}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5753DE3-4DAC-4141-A0FD-DD2EED199213}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5753DE3-4DAC-4141-A0FD-DD2EED199213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6094710-F8A1-42AB-A1E4-15D09EA758E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6094710-F8A1-42AB-A1E4-15D09EA758E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6094710-F8A1-42AB-A1E4-15D09EA758E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6094710-F8A1-42AB-A1E4-15D09EA758E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
