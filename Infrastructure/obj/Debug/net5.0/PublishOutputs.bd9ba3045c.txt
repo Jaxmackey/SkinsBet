@@ -1,0 +1,14 @@
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Infrastructure.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Infrastructure.deps.json
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Infrastructure.pdb
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Microsoft.Extensions.DependencyInjection.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Microsoft.Extensions.Http.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Microsoft.Extensions.Logging.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Microsoft.Extensions.Options.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Microsoft.Extensions.Primitives.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\System.Diagnostics.DiagnosticSource.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Domain.dll
+D:\Projects\SkinsBetMain\Infrastructure\bin\Debug\net5.0\publish\Domain.pdb

@@ -24,35 +24,12 @@
     </div>
   </div>
   <div class="col-12">
-    <button onclick="sendInfo()" class="btn btn-primary" type="submit">Участвовать в розыгрыше.</button>
+    <button class="btn btn-primary" type="submit">Участвовать в розыгрыше.</button>
   </div>
 </form>
+<div id="StatusInsert"></div>
 </div>
 <script type="application/javascript">
-function sendInfo()
-{
-    (async () => {
-                  const rawResponse = await fetch('/Betting/InsertInfo', 
-                  {
-                    method: 'POST',
-                    headers: {
-                      'Accept': 'application/json',
-                      'Content-type': 'application/json'
-                    },
-                    body: JSON.stringify({loginYoutube : document.getElementById('validationCustom01').value, loginSteam : document.getElementById('validationCustom02').value, email : document.getElementById('validationCustomUsername').value}),
-                  });
-                  const content = await rawResponse.json();
-                  clearInterval(foobarTimeout);
-                  if (content.select)
-                  {
-                      document.getElementById("id__"+ content.id+" classid__" + content.classId).style.border = "thick solid #08FF00";
-                  }else
-                  {
-                      document.getElementById("id__"+ content.id+" classid__" + content.classId).style.border = "thick solid #FF0000";
-                  }
-                  console.log(content);
-                })();
-}
 (function () {
   'use strict'
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -62,13 +39,40 @@ function sendInfo()
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
+          debugger;
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
+        }
+        else
+        {
+            insertInfo().then(data => 
+            {
+                changeInsertText(data);
+            });
         }
 
         form.classList.add('was-validated')
       }, false)
     })
 })()
+async function insertInfo()
+{
+    debugger;
+    const rawResponse = await fetch('/Betting/InsertInfo', 
+                                  {
+                                    method: 'POST',
+                                    headers: {
+                                      'Accept': 'application/json',
+                                      'Content-type': 'application/json'
+                                    },
+                                    body: JSON.stringify({loginYoutube : document.getElementById('validationCustom01').value, loginSteam : document.getElementById('validationCustom02').value, email : document.getElementById('validationCustomUsername').value}),
+                                  });
+                                  return await rawResponse.json();
+}
+function changeInsertText(status)
+{
+    debugger;
+    document.getElementById('StatusInsert').textContent = status;
+}
 </script>

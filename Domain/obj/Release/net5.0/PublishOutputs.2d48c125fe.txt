@@ -1,0 +1,3 @@
+D:\Projects\SkinsBetMain\Domain\bin\Release\net5.0\publish\Domain.dll
+D:\Projects\SkinsBetMain\Domain\bin\Release\net5.0\publish\Domain.deps.json
+D:\Projects\SkinsBetMain\Domain\bin\Release\net5.0\publish\Domain.pdb

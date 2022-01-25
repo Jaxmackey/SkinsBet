@@ -23,7 +23,7 @@ namespace SkinsBetWebApp.Controllers
         [Route("questionnaire")]
         public async Task<IActionResult> Questionnaire()
         {
-            return View();
+            return await Task.FromResult(View());
         }
     }
 }

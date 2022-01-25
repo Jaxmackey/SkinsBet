@@ -51,21 +51,39 @@ namespace SkinsBetWebApp.Controllers
         }
 
         [HttpPost]
-        public async Task<Info> InsertInfo([FromBody]Info info)
+        public async Task<string> InsertInfo([FromBody]Info info)
         {
             var currentDate = DateTime.Now.Date;
             var currentDateDb = await _myWrap.ExecSqlCommandAsync(
                 $"SELECT * FROM beginsbet WHERE StartedAt = STR_TO_DATE('{currentDate}','%d.%m.%Y %H:%i:%s');");
+            var remoteIpAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
             if (currentDateDb.Rows.Count != 0)
             {
-                
+                var playerDb =
+                    await _myWrap.ExecSqlCommandAsync(
+                        $"SELECT * FROM players WHERE LoginYoutube = '{info.LoginYoutube}' OR LoginSteam = '{info.LoginSteam}' OR Email = '{info.Email}';");
+                if (playerDb.Rows.Count == 0)
+                {
+                    var beginId = Convert.ToInt32(currentDateDb.Rows[0]["Id"]);
+                    await _myWrap.ExecSqlCommandAsync(
+                        $"INSERT players(Id, BeginsBetId, LoginYoutube, LoginSteam, Email, Ip) VALUE(0, {beginId}, '{info.LoginYoutube}', '{info.LoginSteam}', '{info.Email}', '{remoteIpAddress}');");
+                    return "Поздравляем! Вы участник сегодняшней лотереи.";
+                }
+                else
+                {
+                    return "Участник с таким же LoginYoutube, LoginSteam или Email уже участвует.";
+                }
             }
             else
             {
-                
+                var beginIdDb =
+                    await _myWrap.ExecSqlCommandAsync(
+                        "INSERT beginsbet(Id, StartedAt) VALUES(0, NOW()); SELECT LAST_INSERT_ID() as Id;");
+                var beginId = Convert.ToInt32(beginIdDb.Rows[0]["Id"]);
+                await _myWrap.ExecSqlCommandAsync(
+                    $"INSERT players(Id, BeginsBetId, LoginYoutube, LoginSteam, Email, Ip) VALUE(0, {beginId}, '{info.LoginYoutube}', '{info.LoginSteam}', '{info.Email}', '{remoteIpAddress}');");
+                return "Поздравляем! Вы участник сегодняшней лотереи.";
             }
-            var remoteIpAddress = HttpContext.Connection.RemoteIpAddress;
-            return info;
         }
     }
 }

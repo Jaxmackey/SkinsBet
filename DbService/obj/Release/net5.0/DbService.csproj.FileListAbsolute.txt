@@ -1,0 +1,12 @@
+D:\Projects\SkinsBetMain\DbService\bin\Release\net5.0\DbService.deps.json
+D:\Projects\SkinsBetMain\DbService\bin\Release\net5.0\DbService.dll
+D:\Projects\SkinsBetMain\DbService\bin\Release\net5.0\ref\DbService.dll
+D:\Projects\SkinsBetMain\DbService\bin\Release\net5.0\DbService.pdb
+D:\Projects\SkinsBetMain\DbService\obj\Release\net5.0\DbService.csproj.AssemblyReference.cache
+D:\Projects\SkinsBetMain\DbService\obj\Release\net5.0\DbService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\SkinsBetMain\DbService\obj\Release\net5.0\DbService.AssemblyInfoInputs.cache
+D:\Projects\SkinsBetMain\DbService\obj\Release\net5.0\DbService.AssemblyInfo.cs
+D:\Projects\SkinsBetMain\DbService\obj\Release\net5.0\DbService.csproj.CoreCompileInputs.cache
+D:\Projects\SkinsBetMain\DbService\obj\Release\net5.0\DbService.dll
+D:\Projects\SkinsBetMain\DbService\obj\Release\net5.0\ref\DbService.dll
+D:\Projects\SkinsBetMain\DbService\obj\Release\net5.0\DbService.pdb
