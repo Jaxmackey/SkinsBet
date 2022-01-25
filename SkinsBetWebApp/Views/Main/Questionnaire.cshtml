@@ -1,12 +1,74 @@
-﻿
-  <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
+﻿<div style="">
+<form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Никнейм youtube (как в чате)</label>
+    <input type="text" class="form-control" id="validationCustom01" value="" required>
+    <div class="valid-feedback">
+      Выглядит отлично!
     </div>
   </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Никнейм steam</label>
+    <input type="text" class="form-control" id="validationCustom02" value="" required>
+    <div class="valid-feedback">
+      Выглядит отлично!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Email (должен быть валидный - возможно будет отсылаться сообщеине с кодом)</label>
+    <div class="input-group has-validation">
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Пожалуйсто заполните поле email.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button onclick="sendInfo()" class="btn btn-primary" type="submit">Участвовать в розыгрыше.</button>
+  </div>
+</form>
+</div>
+<script type="application/javascript">
+function sendInfo()
+{
+    (async () => {
+                  const rawResponse = await fetch('/Betting/InsertInfo', 
+                  {
+                    method: 'POST',
+                    headers: {
+                      'Accept': 'application/json',
+                      'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify({loginYoutube : document.getElementById('validationCustom01').value, loginSteam : document.getElementById('validationCustom02').value, email : document.getElementById('validationCustomUsername').value}),
+                  });
+                  const content = await rawResponse.json();
+                  clearInterval(foobarTimeout);
+                  if (content.select)
+                  {
+                      document.getElementById("id__"+ content.id+" classid__" + content.classId).style.border = "thick solid #08FF00";
+                  }else
+                  {
+                      document.getElementById("id__"+ content.id+" classid__" + content.classId).style.border = "thick solid #FF0000";
+                  }
+                  console.log(content);
+                })();
+}
+(function () {
+  'use strict'
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>

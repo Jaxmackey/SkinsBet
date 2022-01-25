@@ -46,5 +46,12 @@ namespace SkinsBetWebApp.Controllers
             
             return Ok(skins[numEnd]);
         }
+
+        [HttpPost]
+        public async Task<Info> InsertInfo([FromBody]Info info)
+        {
+            var remoteIpAddress = HttpContext.Connection.RemoteIpAddress;
+            return info;
+        }
     }
 }

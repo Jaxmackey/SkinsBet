@@ -7,29 +7,40 @@
     <projectFile profileName="SkinsBetWebApp">SkinsBetWebApp/SkinsBetWebApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3dc2b63-8fae-4276-8154-0fe5b4ecc7b0" name="Changes" comment="">
+    <list default="true" id="f3dc2b63-8fae-4276-8154-0fe5b4ecc7b0" name="Changes" comment="сделал правильный тип проекта">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SkinsBetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SkinsBetApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/net5.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/net5.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/net5.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/net5.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/net5.0/ref/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/net5.0/ref/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net5.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net5.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net5.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net5.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/net5.0/ref/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/net5.0/ref/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/net5.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/net5.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/net5.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/net5.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/net5.0/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/net5.0/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/net5.0/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/net5.0/Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/net5.0/Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/net5.0/Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/Controllers/BettingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/Controllers/BettingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/Controllers/MainController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/Controllers/MainController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/Entities/ResultDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/Models/ResultDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/Entities/ResultRequestDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/Models/ResultRequestDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/SkinsBetApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/SkinsBetApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/Views/Main/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/Views/Main/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/SkinsBetApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/ref/SkinsBetApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/bin/Debug/net5.0/ref/SkinsBetApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/Razor/Views/Main/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/Razor/Views/Main/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/SkinsBetApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/ref/SkinsBetApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetApp/obj/Debug/net5.0/ref/SkinsBetApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/net5.0/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/net5.0/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/net5.0/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/net5.0/Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/Controllers/BettingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/Controllers/BettingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/Views/Main/Questionnaire.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/Views/Main/Questionnaire.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/SkinsBetWebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/SkinsBetWebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/SkinsBetWebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/SkinsBetWebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/SkinsBetWebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/SkinsBetWebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/SkinsBetWebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/SkinsBetWebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/ref/SkinsBetWebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/bin/Debug/net5.0/ref/SkinsBetWebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/Razor/Views/Main/Questionnaire.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/Razor/Views/Main/Questionnaire.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/SkinsBetWebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/ref/SkinsBetWebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SkinsBetWebApp/obj/Debug/net5.0/ref/SkinsBetWebApp.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +155,7 @@
       <workItem from="1642704604266" duration="193000" />
       <workItem from="1642707389176" duration="1706000" />
       <workItem from="1642962870646" duration="1589000" />
-      <workItem from="1643101191401" duration="3482000" />
+      <workItem from="1643101191401" duration="5805000" />
     </task>
     <task id="LOCAL-00001" summary="START">
       <created>1642446430341</created>
@@ -160,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642509996570</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="сделал правильный тип проекта">
+      <created>1643104779753</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643104779753</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +203,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="START" />
     <MESSAGE value="loot" />
-    <option name="LAST_COMMIT_MESSAGE" value="loot" />
+    <MESSAGE value="сделал правильный тип проекта" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделал правильный тип проекта" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SkinsBetWebApp/Controllers/BettingController.cs</url>
+          <line>51</line>
+          <properties documentPath="D:\Projects\SkinsBetMain\SkinsBetWebApp\Controllers\BettingController.cs" initialLine="51" containingFunctionPresentation="method 'InsertInfo'">
+            <startOffsets>
+              <option value="1483" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1484" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
