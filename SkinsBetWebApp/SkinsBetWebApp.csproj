@@ -15,4 +15,8 @@
       <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Include="wwwroot\Sounds\04796.mp3" />
+    </ItemGroup>
+
 </Project>

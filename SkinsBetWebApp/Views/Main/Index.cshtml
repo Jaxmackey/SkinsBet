@@ -15,7 +15,6 @@ function clearRed()
 }
 function selectItemProcess()
 {
-    debugger;
     let total = items.length - 1;
     let rand = Math.floor(Math.random() * (total));
     let currentItem = document.getElementById("id__"+ items[rand].id+" classid__" + items[rand].classId);
@@ -43,6 +42,13 @@ function takeResult()
     if (chances < 3)
     {
         debugger;
+        let bettingSound = new Audio("/Betting/GetAudioFile?name=04796.mp3");
+        bettingSound.volume = 0.1;
+        let fail = new Audio("/Betting/GetAudioFile?name=736b557f79b5489.mp3");
+         fail.volume = 0.1;
+        let win = new Audio("/Betting/GetAudioFile?name=3283ff775b4b474.mp3");
+         win.volume = 0.1;
+        bettingSound.play();
             clearRed();
             let foobarTimeout = setInterval(selectItemProcess, 100);
             selectItemProcess();
@@ -57,13 +63,19 @@ function takeResult()
                 body: JSON.stringify(items),
               });
               const content = await rawResponse.json();
+              bettingSound.pause();
+              bettingSound.currentTime = 0;
               clearInterval(foobarTimeout);
               if (content.select)
               {
                   document.getElementById("id__"+ content.id+" classid__" + content.classId).style.border = "thick solid #08FF00";
+                  await win.play();
+                  win.currentTime = 0;
               }else
               {
                   document.getElementById("id__"+ content.id+" classid__" + content.classId).style.border = "thick solid #FF0000";
+                  await fail.play();
+                  fail.currentTime = 0;
               }
               console.log(content);
             })();
@@ -128,9 +140,9 @@ function selectItem(id, classId)
               @foreach (var item in Model)
               {
                   <td id="id__@item.Id classid__@item.ClassId" class="item" onclick="selectItem(@item.Id, @item.ClassId)">
-                      <img style=" height:70px;
-                                       width:auto;/*maintain aspect ratio*/
-                                       max-width:70px;" src="@Url.Content(item.IconUrl)" alt="Image"/>
+          <img style=" height:90px;
+                       width:auto;/*maintain aspect ratio*/
+                       max-width:90px;" src="@Url.Content(item.IconUrl)" alt="Image"/>
                   </td>
                   if (counter % 10 == 0)
                   {

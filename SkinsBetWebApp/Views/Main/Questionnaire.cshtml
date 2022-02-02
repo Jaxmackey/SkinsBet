@@ -27,9 +27,21 @@
     <button class="btn btn-primary" type="submit">Участвовать в розыгрыше.</button>
   </div>
 </form>
-<div id="StatusInsert"></div>
+  <div id="StatusInsert"></div>
+  <div style="padding-top: 20px;" id="players">
+    <h2>Участники:</h2>
+  </div>
 </div>
 <script type="application/javascript">
+getPlayers().then(data => {
+  debugger;
+  for (step = 0; step < data.length; step++) {
+    const newElem = document.createElement("div");
+    newElem.setAttribute("class", "row");
+    newElem.innerText = data[step].loginYoutube
+    document.getElementById("players").appendChild(newElem)
+  }
+});
 (function () {
   'use strict'
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -74,5 +86,18 @@ function changeInsertText(status)
 {
     debugger;
     document.getElementById('StatusInsert').textContent = status;
+}
+async function getPlayers()
+{
+  debugger;
+      const rawResponse = await fetch('/Betting/GetPlayers', 
+                                    {
+                                      method: 'GET',
+                                      headers: {
+                                        'Accept': 'application/json',
+                                        'Content-type': 'application/json'
+                                      }
+                                    });
+                                    return await rawResponse.json();
 }
 </script>

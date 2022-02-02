@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using DbService;
@@ -16,9 +17,11 @@ namespace SkinsBetWebApp
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IWebHostEnvironment _env;
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
 
         public IConfiguration Configuration { get; }
@@ -26,6 +29,11 @@ namespace SkinsBetWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<ISoundsRepository, SoundsRepository>(_ =>
+            {
+                var soundsRoot = Path.Combine(_env.WebRootPath,"Sounds");
+                return new SoundsRepository(soundsRoot);
+            });
             services.AddHttpClient<ISteamRepository, SteamRepository>();
             services.AddSingleton<IMyWrap, MyWrap>();
             services.AddControllersWithViews();
@@ -45,7 +53,14 @@ namespace SkinsBetWebApp
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
+            app.UseCors(options =>
+            {
+                options.SetIsOriginAllowed(t=> true)
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+            });
             app.UseStaticFiles();
 
             app.UseRouting();

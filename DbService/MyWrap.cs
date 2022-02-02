@@ -6,7 +6,7 @@ namespace DbService
 {
     public class MyWrap : IMyWrap
     {
-        private string _connectionString = "server=127.0.0.1;uid=admin;pwd=rootroot1225;database=skinsbet;";
+        private string _connectionString = "server=127.0.0.1;uid=u1531_841default;pwd=X2Je025whxFGt2YE;database=u1531841_default;";
         public async Task<DataTable> ExecProcedureAsync()
         {
             return await Task.Run(() =>
