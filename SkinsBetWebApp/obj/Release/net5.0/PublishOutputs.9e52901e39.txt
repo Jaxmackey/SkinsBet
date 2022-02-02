@@ -35,6 +35,9 @@ D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\wwwroot\lib\j
 D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\wwwroot\lib\jquery\dist\jquery.min.js
 D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\wwwroot\lib\jquery\dist\jquery.min.map
 D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\wwwroot\lib\jquery\LICENSE.txt
+D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\wwwroot\Sounds\04796.mp3
+D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\wwwroot\Sounds\3283ff775b4b474.mp3
+D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\wwwroot\Sounds\736b557f79b5489.mp3
 D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\appsettings.Development.json
 D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\appsettings.json
 D:\Projects\SkinsBetMain\SkinsBetWebApp\bin\Release\net5.0\publish\SkinsBetWebApp.dll

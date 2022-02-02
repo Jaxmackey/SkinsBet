@@ -40,22 +40,13 @@ namespace SkinsBetWebApp.Controllers
                 return BadRequest();
             }
 
-            for (int i = 0; i < skins.Length; i++)
-            {
-                var current = result[i];
-                if (current.Id != skins[i].Id || current.ClassId != skins[i].ClassId )
-                {
-                    return BadRequest();
-                }
-            }
-
             var totalSkins = result.Count - 1;
             var random = new Random();
             Thread.Sleep(random.Next(3000, 8000));
             var numEnd = random.Next(0, totalSkins);
             if (_blackList.Any(x => x == skins[numEnd].ClassId))
             {
-                numEnd += random.Next(55, totalSkins);
+                numEnd += random.Next(totalSkins/2, totalSkins);
             }
 
             return Ok(skins[numEnd]);

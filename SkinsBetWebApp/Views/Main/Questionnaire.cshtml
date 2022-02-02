@@ -1,73 +1,113 @@
 ﻿<div style="">
-<form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">Никнейм youtube (как в чате)</label>
     <input type="text" class="form-control" id="validationCustom01" value="" required>
-    <div class="valid-feedback">
+    <div id="coolLoginYoutube" style="display: none; color: #1e7e34">
       Выглядит отлично!
     </div>
+    <div id="wrongLoginYoutube" style="display: none; color: red">
+      Не может быть пустым
+      </div>
   </div>
   <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Никнейм steam</label>
     <input type="text" class="form-control" id="validationCustom02" value="" required>
-    <div class="valid-feedback">
-      Выглядит отлично!
-    </div>
+     <div id="coolLoginSteam" style="display: none; color: #1e7e34">
+          Выглядит отлично!
+        </div>
+        <div id="wrongLoginSteam" style="display: none; color: red">
+          Не может быть пустым
+          </div>
   </div>
   <div class="col-md-4">
     <label for="validationCustomUsername" class="form-label">Email (должен быть валидный - возможно будет отсылаться сообщеине с кодом)</label>
-    <div class="input-group has-validation">
-      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-      <div class="invalid-feedback">
-        Пожалуйсто заполните поле email.
+    <input type="text" class="form-control" id="validationCustomUsername" required>
+      <div id="coolEmail" style="display: none; color: #1e7e34">
+        Выглядит отлично!
+      </div>
+      <div id="wrongEmail" style="display: none; color: red">
+        Не может быть пустым
       </div>
     </div>
-  </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Участвовать в розыгрыше.</button>
+    <button class="btn btn-primary" onclick="playInLotto()">Участвовать в розыгрыше.</button>
   </div>
-</form>
   <div id="StatusInsert"></div>
+      <h2>Участники:</h2>
   <div style="padding-top: 20px;" id="players">
-    <h2>Участники:</h2>
   </div>
 </div>
 <script type="application/javascript">
 getPlayers().then(data => {
-  debugger;
-  for (step = 0; step < data.length; step++) {
-    const newElem = document.createElement("div");
-    newElem.setAttribute("class", "row");
-    newElem.innerText = data[step].loginYoutube
-    document.getElementById("players").appendChild(newElem)
-  }
+  makerTablePlayers(data);
 });
-(function () {
-  'use strict'
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-          debugger;
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-        else
-        {
-            insertInfo().then(data => 
-            {
-                changeInsertText(data);
-            });
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
+function makerTablePlayers(data)
+{
+  removeAllChildNodes(document.getElementById("players"));
+    for (step = 0; step < data.length; step++) {
+      const newElem = document.createElement("div");
+      newElem.setAttribute("class", "row");
+      newElem.innerText = data[step].loginYoutube
+      document.getElementById("players").appendChild(newElem)
+    }
+}
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+function playInLotto()
+{
+  debugger;
+  let inputLoginYoutube = document.getElementById('validationCustom01');
+  let inputLoginSteam = document.getElementById('validationCustom02');
+  let inputEmail = document.getElementById('validationCustomUsername');
+  let validate = true;
+  if (inputLoginYoutube.value === '')
+  {
+    document.getElementById('coolLoginYoutube').style.display = 'none';
+    document.getElementById('wrongLoginYoutube').style.display = null;
+    validate = false;
+  }
+  else
+  {
+    document.getElementById('wrongLoginYoutube').style.display = 'none';
+    document.getElementById('coolLoginYoutube').style.display = null;
+  }
+  debugger;
+  if(inputLoginSteam.value === '')
+  {
+     document.getElementById('coolLoginSteam').style.display = 'none';
+        document.getElementById('wrongLoginSteam').style.display = null;
+        validate = false;
+  }
+  else 
+  {
+      document.getElementById('wrongLoginSteam').style.display = 'none';
+          document.getElementById('coolLoginSteam').style.display = null;
+  }
+  if (inputEmail.value === '')
+  {
+     document.getElementById('coolEmail').style.display = 'none';
+            document.getElementById('wrongEmail').style.display = null;
+            validate = false;
+  }
+  else
+  {
+    document.getElementById('wrongEmail').style.display = 'none';
+              document.getElementById('coolEmail').style.display = null;
+  }
+  if (validate)
+  {
+    insertInfo().then(idata => 
+    {
+      getPlayers().then((pdata)=> 
+      {
+        makerTablePlayers(pdata)
+      });
+    });
+  }
+}
 async function insertInfo()
 {
     debugger;

@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
+using System.Security.Cryptography;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Entities.Dto;
 using Domain.Extension;
 using Domain.Interfaces;
+using Infrastructure.Extentions;
 
 namespace SkinsBetApp.Repositories
 {
@@ -15,7 +18,6 @@ namespace SkinsBetApp.Repositories
         private readonly HttpClient _httpClient;
         private static string _baseUrl = "http://steamcommunity.com/inventory";
         private static IEnumerable<Skin> _defaultSkinsResult = Array.Empty<Skin>();
-        
         public SteamRepository(HttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -24,7 +26,9 @@ namespace SkinsBetApp.Repositories
         {
             var json = await _httpClient.GetStringAsync($"{_baseUrl}/76561198424224212/730/2?l=russian&count=5000");
             var result = JsonSerializer.Deserialize<WrapSkinDto>(json);
-            return result == null ? _defaultSkinsResult : result.ToSkins();
+            return result == null ? _defaultSkinsResult : result.ToSkins().Where(x => x.ClassId != "4727366046" 
+                && x.ClassId != "3653202725"
+                && x.ClassId != "3106076676").ToList().Shuffle();
         }
     }
 }
