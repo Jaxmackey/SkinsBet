@@ -20,22 +20,30 @@
           </div>
   </div>
   <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label">Email (должен быть валидный - возможно будет отсылаться сообщеине с кодом)</label>
+    <label for="validationCustomUsername" class="form-label">Email (должен быть валидный - будет отсылаться сообщеине с кодом.)</label>
     <input type="text" class="form-control" id="validationCustomUsername" required>
-      <div id="coolEmail" style="display: none; color: #1e7e34">
-        Выглядит отлично!
-      </div>
-      <div id="wrongEmail" style="display: none; color: red">
-        Не может быть пустым
-      </div>
+    <div id="coolEmail" style="display: none; color: #1e7e34">
+      Выглядит отлично!
     </div>
-  <div class="col-12">
+    <div id="wrongEmail" style="display: none; color: red">
+      Не может быть пустым
+    </div>
+  </div>
+  
+  <div class="col-md-4">
     <button class="btn btn-primary" onclick="playInLotto()">Участвовать в розыгрыше.</button>
   </div>
-  <div id="StatusInsert"></div>
-      <h2>Участники:</h2>
-  <div style="padding-top: 20px;" id="players">
+  <div style="padding-top: 15px; display: none;" id="secret" class="col-md-4">
+    <p style="color: #1e7e34">Письмо на указаный email отправлено. (Письмо может попасть в "Спам". Проверьте папку "Спам")</p>
+    <label for="secret_input" class="form-label">Введите полученый код.</label>
+    <input type="text" class="form-control" id="secret_input" required>
+    <button class="btn btn-primary" onclick="endAuth()">Отправить</button>
   </div>
+    <div class="col-md-4">
+        <h2>Участники:</h2>
+        <div style="padding-top: 20px;" id="players">
+        </div>
+    </div>
 </div>
 <script type="application/javascript">
 getPlayers().then(data => {
@@ -99,9 +107,44 @@ function playInLotto()
   }
   if (validate)
   {
-    
+    localStorage.setItem("q", JSON.stringify({loginYoutube : document.getElementById('validationCustom01').value, loginSteam : document.getElementById('validationCustom02').value, email : document.getElementById('validationCustomUsername').value}));
+    sendEmail(inputEmail.value).then((data)=>
+    {
+      localStorage.setItem("k", JSON.stringify({"key": data}));
+      document.getElementById('secret').style.display = null;
+    }).catch((ex)=> {console.log(ex)});
   }
 }
+
+async function sendEmail(email)
+{
+  const rawResponse = await fetch('/Betting/Authification?email=' + email, 
+                                    {
+                                      method: 'GET',
+                                      headers: {
+                                        'Accept': 'application/json',
+                                        'Content-type': 'application/json'
+                                      }
+                                    });
+                                    return await rawResponse.json();
+}
+
+function endAuth()
+{
+  debugger;
+  document.getElementById('secret').style.display = "none";
+  let key = JSON.parse(localStorage.getItem('k')).key
+  let secretInput = document.getElementById('secret_input').value;
+  if(secretInput === key)
+  {
+    insertInfo().then((data => {
+      getPlayers().then((d)=>{
+        makerTablePlayers(d)
+      });
+    }))
+  }
+}
+
 async function insertInfo()
 {
     debugger;
@@ -112,7 +155,7 @@ async function insertInfo()
                                       'Accept': 'application/json',
                                       'Content-type': 'application/json'
                                     },
-                                    body: JSON.stringify({loginYoutube : document.getElementById('validationCustom01').value, loginSteam : document.getElementById('validationCustom02').value, email : document.getElementById('validationCustomUsername').value}),
+                                    body: JSON.stringify(JSON.parse(localStorage.getItem("q"))),
                                   });
                                   return await rawResponse.json();
 }
