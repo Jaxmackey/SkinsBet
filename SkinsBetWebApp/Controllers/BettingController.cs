@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading;
 using System.Threading.Tasks;
 using DbService;
@@ -111,6 +112,30 @@ namespace SkinsBetWebApp.Controllers
         {
             var bytes = _soundsRepository.GetMainSound(name);
             return File(bytes, "audio/mpeg", name);
+        }
+
+        [HttpGet]
+        public ActionResult Authification(string email)
+        {
+            var authString = RandomString(10);
+            SmtpClient smtpClient = new SmtpClient("mail.hosting.reg.ru", 587);
+            smtpClient.Credentials = new System.Net.NetworkCredential("info@hqsoftware.online", "Tlentlen12251225!");
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtpClient.EnableSsl = true;
+            MailMessage mail = new MailMessage();
+            mail.From = new MailAddress("info@hqsoftware.online", "SkinsBet (Neo_One)");
+            mail.To.Add(new MailAddress(email));
+            mail.Body = authString;
+            smtpClient.Send(mail);
+            return Ok(authString);
+        }
+        
+        private static string RandomString(int length)
+        {
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }

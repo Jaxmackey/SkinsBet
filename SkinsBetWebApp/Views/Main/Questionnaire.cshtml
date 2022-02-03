@@ -99,13 +99,7 @@ function playInLotto()
   }
   if (validate)
   {
-    insertInfo().then(idata => 
-    {
-      getPlayers().then((pdata)=> 
-      {
-        makerTablePlayers(pdata)
-      });
-    });
+    
   }
 }
 async function insertInfo()
