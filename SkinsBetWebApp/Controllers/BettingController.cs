@@ -23,6 +23,13 @@ namespace SkinsBetWebApp.Controllers
             /*"4727366046",*/
             "4727396940",
             "4724348893",
+            "4732360253",
+            "4732359391",
+            "4727362087",
+            "4732362121",
+            "4727548691",
+            "4732357436",
+            "4732359599"
             /*"3179954595"*/
         };
         public Betting(ISteamRepository steamRepository, IMyWrap myWrap, ISoundsRepository soundsRepository)
@@ -112,5 +119,15 @@ namespace SkinsBetWebApp.Controllers
             var bytes = _soundsRepository.GetMainSound(name);
             return File(bytes, "audio/mpeg", name);
         }
+
+        /*[HttpGet]
+        public ActionResult SendEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                return Ok(new EmailResponse { Success = false, Message = "Пустой адрес"});
+            }
+            
+        }*/
     }
 }

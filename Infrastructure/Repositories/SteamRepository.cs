@@ -28,7 +28,10 @@ namespace SkinsBetApp.Repositories
             var result = JsonSerializer.Deserialize<WrapSkinDto>(json);
             return result == null ? _defaultSkinsResult : result.ToSkins().Where(x => x.ClassId != "4727366046" 
                 && x.ClassId != "3653202725"
-                && x.ClassId != "3106076676").ToList().Shuffle();
+                && x.ClassId != "3106076676"
+                && x.ClassId != "4732356279"
+                && x.ClassId != "4732372765"
+                && x.ClassId != "4727356937").ToList().Shuffle();
         }
     }
 }

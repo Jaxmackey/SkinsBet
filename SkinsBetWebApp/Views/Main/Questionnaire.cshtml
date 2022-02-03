@@ -99,6 +99,8 @@ function playInLotto()
   }
   if (validate)
   {
+    let q = {loginYoutube : document.getElementById('validationCustom01').value, loginSteam : document.getElementById('validationCustom02').value, email : document.getElementById('validationCustomUsername').value};
+        localStorage.setItem('questionnaire', JSON.stringify(q));
     insertInfo().then(idata => 
     {
       getPlayers().then((pdata)=> 
@@ -118,7 +120,7 @@ async function insertInfo()
                                       'Accept': 'application/json',
                                       'Content-type': 'application/json'
                                     },
-                                    body: JSON.stringify({loginYoutube : document.getElementById('validationCustom01').value, loginSteam : document.getElementById('validationCustom02').value, email : document.getElementById('validationCustomUsername').value}),
+                                    body: JSON.stringify(q),
                                   });
                                   return await rawResponse.json();
 }
